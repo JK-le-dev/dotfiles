@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/var/lib/flatpak/.removed'
+let g:netrw_dirhist_0='/home/justink/.config/libreoffice/4'
+let g:netrw_dirhist_9='/home/justink/Downloads/symlink1'
+let g:netrw_dirhist_8='/home/justink/scripts'
+let g:netrw_dirhist_7='/home/justink/Scripts'
+let g:netrw_dirhist_6='/home/justink'
+let g:netrw_dirhist_5='/home/justink/.config/alacritty'
+let g:netrw_dirhist_4='/home/justink/.config/Code'
+let g:netrw_dirhist_3='/home/justink/.config'
+let g:netrw_dirhist_2='/home/justink/.config/autostart'
