@@ -1,0 +1,19 @@
+<application>
+  <component name="ShownTips">
+    <option name="shownTips">
+      <map>
+        <entry key="Antivirus.html" value="1647367144046" />
+        <entry key="InspectCode.html" value="1641656364110" />
+        <entry key="JoinLines.html" value="1642109582181" />
+        <entry key="Kotlin_mix.html" value="1647482605176" />
+        <entry key="QuickJavaDoc.html" value="1646926035151" />
+        <entry key="Rename.html" value="1642226950601" />
+        <entry key="SearchEverywhereSettings.html" value="1646417775959" />
+        <entry key="SearchForGit.html" value="1646925985432" />
+        <entry key="TabInLookups.html" value="1646749280480" />
+        <entry key="VcsQuickList.html" value="1641502516596" />
+        <entry key="find_usages.html" value="1647118683914" />
+      </map>
+    </option>
+  </component>
+</application>

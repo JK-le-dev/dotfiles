@@ -1,0 +1,18 @@
+"^google-chrome$"
+None, Up, Button4, 2
+None, Down, Button5, 2
+"^code$"
+None, Up, Button4, 2
+None, Down, Button5, 2
+"^jetbrains-idea-ce$"
+None, Up, Button4, 2
+None, Down, Button5, 2
+"^discord$"
+None, Up, Button4, 2
+None, Down, Button5, 2
+"^Steam$"
+None, Up, Button4, 2
+None, Down, Button5, 2
+"^spotify$"
+None, Up, Button4, 2
+None, Down, Button5, 2
