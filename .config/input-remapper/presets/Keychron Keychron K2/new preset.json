@@ -11,6 +11,10 @@
         "1,100,1": [
             "Control_L",
             "keyboard"
+        ],
+        "1,224,1": [
+            "KEY_F1",
+            "keyboard"
         ]
     }
 }
