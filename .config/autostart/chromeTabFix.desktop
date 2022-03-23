@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
-Exec=google-chrome-stable --no-startup-window
+Exec=google-chrome-stable --no-startup-id --no-startup-window
 Hidden=false
 NoDisplay=false
