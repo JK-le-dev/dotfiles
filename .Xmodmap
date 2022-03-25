@@ -1,0 +1,14 @@
+! Swapping Colon and Semicolon
+keycode 47 = colon semicolon
+keycode 108 = Control_R
+! Swapping Caps_Lock and Escape
+remove lock = Caps_Lock
+keycode 9 = Caps_Lock
+keycode 66 = Escape
+! Swap right control and right alt
+remove Control = Control_R
+remove Mod1 = Alt_R
+keycode 105 = Alt_R
+keycode 108 = Control_R
+add Control = Control_R
+add Mod1 = Alt_R
