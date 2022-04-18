@@ -1,7 +1,6 @@
-! Swapping Caps_Lock and Escape
+! Caps_Lock to Escape and Shift + Caps_Lock to Caps_Lock
 remove lock = Caps_Lock
-keycode 9 = Caps_Lock
-keycode 66 = Escape
+keycode 66 = Escape Caps_Lock
 ! Swap right control and right alt
 remove Control = Control_R
 remove Mod1 = Alt_R
