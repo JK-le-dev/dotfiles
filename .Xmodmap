@@ -1,6 +1,3 @@
-! Swapping Colon and Semicolon
-keycode 47 = colon semicolon
-keycode 108 = Control_R
 ! Swapping Caps_Lock and Escape
 remove lock = Caps_Lock
 keycode 9 = Caps_Lock
