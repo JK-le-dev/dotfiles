@@ -1,5 +1,5 @@
 # My Dotfiles
-I'm not expecting anyone to look at my dotfiles and be like "Wow lemme use this" but if for some reason someone is bored enough to do it, here's the rundown 
+I'm not expecting anyone to look at my dotfiles and be like "Wow lemme use this" but if for some reason someone is bored enough to do it, *hell, I don't even use Linux anymore because it keeps being a thorn in my a-"* ANYWAYS
 ## My setup 
 - Distro: Manjaro
 - DE: Plasma
