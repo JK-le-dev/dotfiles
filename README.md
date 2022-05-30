@@ -7,8 +7,8 @@ I'm not expecting anyone to look at my dotfiles and be like "Wow lemme use this"
 ## Required Packages
 - pfetch
 If you have Arch linux, install it from the AUR as so:
-```yay 
--S pfetch
+```
+yay -S pfetch
 ```
 For all other distros, refer this to this [video][pfetch] or figure out a easier way to install it on there distros have me update this section
 
