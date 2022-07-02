@@ -12,7 +12,6 @@ _set_liveuser_PS1() {
 	            git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 	    }
 
-	    pfetch
 	    PS1="\[\e[36m\]\w"
 	    PS1+="\[\e[31m\]\$(parse_git_branch) "
 	    PS1+="\[\e[35m\]$ \[\e[00m\]"

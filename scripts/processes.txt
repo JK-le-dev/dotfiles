@@ -1,0 +1,3 @@
+rclone mount onedrive:/projects/compSci/current/ ~/onedrive/compSciProjects --vfs-cache-mode writes
+rclone mount onedrive:/mystuff/memez ~/onedrive/memez --vfs-cache-mode writes
+pwsh ~/scripts/downloadAuto.ps1
