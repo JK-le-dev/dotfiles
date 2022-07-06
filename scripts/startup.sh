@@ -28,6 +28,6 @@ done
 -
 '
 sleep 1
-redshift -O 8000K
+redshift -O 7500K
 imwheel 45
 rclone sync ~/scripts/ onedrive:scripts/
