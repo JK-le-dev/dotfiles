@@ -27,7 +27,7 @@ done
 : 'Runs a bunch of commands after pausing for a bit
 -
 '
-sleep 10
+sleep 1
 redshift -O 8000K
 imwheel 45
 rclone sync ~/scripts/ onedrive:scripts/

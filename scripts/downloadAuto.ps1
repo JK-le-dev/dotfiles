@@ -15,6 +15,10 @@ In order to accomplish that we need to:
 
 # Folder Destination references
 $downloads = "$HOME\Downloads"
+<<<<<<< HEAD
+=======
+$documentsFolder = "$HOME\Documents"
+>>>>>>> newStuff
 $ytvideosFolder = $HOME + "\Videos\Youtube"
 $videosFolder = $HOME + "\Videos"
 $imagesFolder = $HOME + "\Pictures"
@@ -25,9 +29,16 @@ $9convert = "\9convert.com - *"
 $imageExtensions = @("jpeg", "jpg", "png", "webp", "gif", "jfif")
 $videoExtensions = @("mov", "MOV", "MP4", "mp4")
 $musicExtensions = @("mp3", "wav")
+<<<<<<< HEAD
 
 # Create Folder Destinations if they don't exist
 $destinations = @($ytvideosFolder, $videosFolder, $imagesFolder, $otherFolder, $musicFolder)
+=======
+$documentExtensions = @("pdf", "docx", "txt")
+
+# Create Folder Destinations if they don't exist
+$destinations = @($ytvideosFolder, $videosFolder, $imagesFolder, $otherFolder, $musicFolder, $documentsFolder)
+>>>>>>> newStuff
 
 # Fills in missing folders
 foreach ($dest in $destinations) {
@@ -41,6 +52,12 @@ foreach ($dest in $destinations) {
 for (; ; ) {
     Move-Item -Path $downloads$9Convert -Destination $ytvideosFolder
 
+<<<<<<< HEAD
+=======
+    foreach ($extension in $documentExtensions) {
+        Move-Item -Path $downloads"\*."$extension -Destination $documentsFolder
+    }
+>>>>>>> newStuff
     foreach ($extension in $imageExtensions) {
         Move-Item -Path $downloads"\*."$extension -Destination $imagesFolder
     }
