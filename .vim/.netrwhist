@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/justink/.vim'
 let g:netrw_dirhist_3='/home/justink/.config/alacritty'
 let g:netrw_dirhist_2='/home/justink/.config/kitty'
 let g:netrw_dirhist_1='/var/lib/flatpak/.removed'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_8='/home/justink/scripts'
 let g:netrw_dirhist_7='/home/justink/Scripts'
 let g:netrw_dirhist_6='/home/justink'
 let g:netrw_dirhist_5='/home/justink/.config/alacritty'
-let g:netrw_dirhist_4='/home/justink/.config/Code'

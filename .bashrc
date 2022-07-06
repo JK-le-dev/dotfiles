@@ -1,6 +1,18 @@
-#
 # ~/.bashrc
 #
+# Default Configeration created by EndeavourOS and changed to fit my liking.
+# Many aliases were taken from https://www.freecodecamp.org/news/bashrc-customization-guide/ 
+
+## Colors
+blk='\[\033[00;30m\]'   # Black
+red='\[\033[00;31m\]'   # Red
+grn='\[\033[00;32m\]'   # Green
+ylw='\[\033[00;33m\]'   # Yellow
+blu='\[\033[00;34m\]'   # Blue
+pur='\[\033[00;35m\]'   # Purple
+cyn='\[\033[00;36m\]'   # Cyan
+wht='\[\033[00;37m\]'   # White
+clr='\[\033[00m\]'      # Reset
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -12,9 +24,9 @@ _set_liveuser_PS1() {
 	            git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 	    }
 
-	    PS1="\[\e[36m\]\w"
-	    PS1+="\[\e[31m\]\$(parse_git_branch) "
-	    PS1+="\[\e[35m\]$ \[\e[00m\]"
+	    PS1="$cyn\w"
+	    PS1+="$red\$(parse_git_branch) "
+	    PS1+="$pur$ $wht"
 
     if [ "$(whoami)" = "liveuser" ] ; then
         local iso_version="$(grep ^VERSION= /usr/lib/endeavouros-release 2>/dev/null | cut -d '=' -f 2)"
@@ -25,22 +37,9 @@ _set_liveuser_PS1() {
         fi
     fi
 }
+
 _set_liveuser_PS1
 unset -f _set_liveuser_PS1
-
-ShowInstallerIsoInfo() {
-    local file=/usr/lib/endeavouros-release
-    if [ -r $file ] ; then
-        cat $file
-    else
-        echo "Sorry, installer ISO info is not available." >&2
-    fi
-}
-
-
-alias ls='ls --color=auto'
-alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 
 [[ "$(whoami)" = "root" ]] && return
 
@@ -51,47 +50,23 @@ alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles exce
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-################################################################################
-## Some generally useful functions.
-## Consider uncommenting aliases below to start using these functions.
-##
-## October 2021: removed many obsolete functions. If you still need them, please look at
-## https://github.com/EndeavourOS-archive/EndeavourOS-archiso/raw/master/airootfs/etc/skel/.bashrc
+## All Aliases
 
-_open_files_for_editing() {
-    # Open any given document file(s) for editing (or just viewing).
-    # Note1:
-    #    - Do not use for executable files!
-    # Note2:
-    #    - Uses 'mime' bindings, so you may need to use
-    #      e.g. a file manager to make proper file bindings.
+# List Files 
+alias ls='ls --color=auto'
+alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
+alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 
-    if [ -x /usr/bin/exo-open ] ; then
-        echo "exo-open $@" >&2
-        setsid exo-open "$@" >& /dev/null
-        return
-    fi
-    if [ -x /usr/bin/xdg-open ] ; then
-        for file in "$@" ; do
-            echo "xdg-open $file" >&2
-            setsid xdg-open "$file" >& /dev/null
-        done
-        return
-    fi
+# Git Aliases
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit'
 
-    echo "$FUNCNAME: package 'xdg-utils' or 'exo' is required." >&2
-}
-
-#------------------------------------------------------------
-
-## Aliases for the functions above.
-## Uncomment an alias if you want to use it.
-##
-
-# alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
-# alias pacdiff=eos-pacdiff
-################################################################################
-
-
+# Dotfiles for github 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/home/justink'
+
+# Other
+alias c='clear'
+alias h='history'
