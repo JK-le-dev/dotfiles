@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Lists of apps to download
-pacmanApps="yay htop trash-cli vim libreoffice imwheel grub-customizer piper ncdu gnome-keyring libsecret libgnome-keyring"
-yayApps="onedriver pfetch snapd flatpak jdk17-openjdk rclone-bin rclone-browser pulseway-bin"
+pacmanApps="yay htop trash-cli vim libreoffice imwheel grub-customizer piper ncdu gnome-keyring libsecret libgnome-keyring imagemagick alacritty tmux"
+yayApps="onedriver pfetch snapd flatpak jdk17-openjdk rclone-bin rclone-browser pulseway-bin alacritty-themes"
 snapApps="brave joplin-desktop todoist spotify"
 snapClassicApps=("code" "intellij-idea-community")
 flatpakApps="yuzu"
