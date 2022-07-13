@@ -29,5 +29,5 @@ done
 '
 sleep 1
 dotfiles pull origin master
-redshift -O 7500K
 rclone sync ~/scripts/ onedrive:scripts/
+imwheel 45
