@@ -1,7 +1,7 @@
 # ~/.bashrc
 #
 # Default Configeration created by EndeavourOS and changed to fit my liking.
-# Many aliases were taken from https://www.freecodecamp.org/news/bashrc-customization-guide/ 
+# Many aliases were taken from https://www.freecodecamp.org/news/bashrc-customization-guide/
 
 ## Colors
 blk='\[\033[00;30m\]'   # Black
@@ -52,7 +52,7 @@ bind '"\e[B":history-search-forward'
 
 ## All Aliases
 
-# List Files 
+# List Files
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
@@ -61,12 +61,20 @@ alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles exce
 alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
-alias gc='git commit'
+alias gcm='git commit'
 
-# Dotfiles for github 
+# Dotfiles for github
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/home/justink'
+
+# Dotfiles Aliases
+alias ds='dotfiles status'
+alias da='dotfiles add'
+alias dcm='dotfiles commit'
 
 # Other
 alias c='clear'
 alias h='history'
+alias e='exit'
+alias s='shutdown now'
+alias r='reboot'
