@@ -71,8 +71,8 @@ alias dotfiles='/usr/bin/git --git-dir=/home/justink/.dotfiles/ --work-tree=/hom
 alias ds='dotfiles status'
 alias da='dotfiles add'
 alias dcm='dotfiles commit'
-alias dotfilespush='dotfiles push origin master'
-alias dotfilespull='dotfiles pull origin master'
+alias dpush='dotfiles push origin master'
+alias dpull='dotfiles pull origin master'
 
 # Other
 alias c='clear'
