@@ -1,14 +1,6 @@
 #!/bin/bash
 
-dirs=("compSciProjects" "memez")
 commandsDir=~/scripts/processes.txt
-
-#Creates folder if it isn't there
-[ ! -d ~/onedrive ] && mkdir ~/onedrive
-
-for dir in "${dirs[@]}"; do
-    [ ! -d ~/onedrive/$dir ] && mkdir ~/onedrive/$dir
-done
 
 : 'Runs a bunch of background processes
 - disowns each process so it can move to the background and the next process can move to the foreground 
