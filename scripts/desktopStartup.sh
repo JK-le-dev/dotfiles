@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#Creates folders that are supposed to be there if they aren't
 commandsDir=~/scripts/processes.txt
+
+#Creates folders that are supposed to be there if they aren't
 dirs=("sync" "memez" "compSciProjects" "wallpapers")
 
 for dir in "${dirs[@]}"; do
@@ -26,6 +27,7 @@ done
 -
 '
 sleep 1
+rm -fr .dotfiles/rebase-merge/
 dotfiles pull origin master
-rclone sync ~/scripts/ onedrive:scripts/
 imwheel 45
+rclone sync ~/scripts/ onedrive:scripts/
