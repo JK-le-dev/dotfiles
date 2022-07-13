@@ -27,7 +27,5 @@ done
 -
 '
 sleep 1
-rm -fr .dotfiles/rebase-merge/
-dotfiles pull origin master
 imwheel 45
 rclone sync ~/scripts/ onedrive:scripts/
