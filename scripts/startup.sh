@@ -20,6 +20,7 @@ done
 -
 '
 sleep 1
+rm -fr .dotfiles/rebase-merge/
 dotfiles pull origin master
 redshift -O 7500K
 rclone sync ~/scripts/ onedrive:scripts/
