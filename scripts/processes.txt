@@ -1,5 +1,4 @@
-rclone mount onedrive:/projects/compSci/current/ ~/compSciProjects --vfs-cache-mode writes
-rclone mount onedrive:/mystuff/memez ~/memez --vfs-cache-mode writes
-rclone mount onedrive:/sync ~/sync --vfs-cache-mode writes
-rclone mount onedrive:/myStuff/wallpapers ~/wallpapers --vfs-cache-mode writes
+rclone mount onedrive:/projects/compSci/current/ ~/compSciProjects --vfs-cache-mode full
+rclone mount onedrive:/mystuff/memez ~/memez --vfs-cache-mode full 
+rclone mount onedrive:/sync ~/sync --vfs-cache-mode full 
 pwsh ~/scripts/downloadAuto.ps1

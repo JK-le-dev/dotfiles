@@ -63,17 +63,16 @@ get_session(){
     echo "dbus-launch ${dbus_args[*]}"
 }
 
-exec imwheel 45
 exec $(get_session "$1")
 
-# Fix VSCode Sync Bug
-
+## Fix VSCode Sync Bug
 # see https://unix.stackexchange.com/a/295652/332452
 exec source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-
 # see https://wiki.archlinux.org/title/GNOME/Keyring#xinitrc
 exec eval $(/usr/bin/gnome-keyring-daemon --start)
 exec export SSH_AUTH_SOCK
-
 # see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
 exec mkdir -p "$HOME"/.local/share/keyrings
+
+## Fix Keychron fuction row
+exec echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode

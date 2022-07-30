@@ -84,6 +84,7 @@ window:
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
   #multiplier: 3
+
 # Font configuration
 font:
   # Normal (roman) font face

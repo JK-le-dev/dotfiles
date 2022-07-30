@@ -1,31 +1,40 @@
 #!/bin/bash
 
-commandsDir=~/scripts/processes.txt
+processes=~/scripts/processes.txt #File for which processes are stored in
+numLines=$(wc -l < $processes) #Number of lines present in processes file
+((numLines++))
+i=1 #Starting index
 
-#Creates folders that are supposed to be there if they aren't
-dirs=("sync" "memez" "compSciProjects" "wallpapers")
-
+#Creates directory if they are not present
+dirs=("sync" "memez" "compSciProjects" "wallpapers") 
 for dir in "${dirs[@]}"; do
-	    [ ! -d ~/$dir ] && mkdir ~/$dir
-    done
+    [ ! -d ~/$dir ] && mkdir ~/$dir
+done
 
 : 'Runs a bunch of background processes
 - disowns each process so it can move to the background and the next process can move to the foreground 
+- Using a text file because saving the file in VSCode keeps erasing my disown commands at the end of each line 
 - wc command does not count last line for some reason, does not count the first line as 0 either so...
 '
-i=1
-numLines=$(wc -l <$commandsDir) #number of lines present in file
-((numLines++))
 
+# While there's a next line within the text file
 while [ $i -le $numLines ]; do
-    echo "$(head -$i $commandsDir | tail +$i)"" & disown" | bash
+    echo "$(head -$i $processes | tail +$i)"" & disown" | bash
     echo "Line $i's command worked"
     ((i++))
 done
 
-: 'Runs a bunch of commands after pausing for a bit
--
+: 'Runs a bunch of commands and runs extra commands if my monitor of choice is plugged in on startup.
+- (activated if DisplayPort-3 is connected, in my case, that means its connected to my docking station where mouse and keyboard is also connected)
+- Will know by taking the input of the xrandr command, if the input doesnt return null using the z flag, then we know the monitor is connected
 '
+
 sleep 1
 redshift -O 7500K
 rclone sync ~/scripts/ onedrive:scripts/
+
+# If DisplayPort-3 is plugged in (xrandrOutput has any value to it)
+if [[ -n "$(xrandr | grep "DisplayPort-3 connected")" ]]; then
+    imwheel 45
+    redshift -x
+fi
